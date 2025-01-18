@@ -1,75 +1,90 @@
-```markdown
-# Car Price Prediction Model
+---
 
-This project uses machine learning to predict the selling price of a used car based on various features, such as the car's year, mileage, fuel type, seller type, transmission, and the number of previous owners. A **Linear Regression** model is used to analyze the relationship between these features and the car's price.
+# **Car Price Prediction Model**
 
-## Project Structure
+This project implements a **Car Price Prediction Model** using **Linear Regression** in a Jupyter Notebook (`.ipynb`) environment. The model predicts the selling price of used cars based on various features such as the car's year, mileage, fuel type, seller type, transmission type, and the number of previous owners.
+
+---
+
+## **Project Structure**
 
 ```
-├── dataset.csv               # Dataset of car features and selling prices
-├── car_price_prediction.py   # Python script for the car price prediction model
-├── README.md                 # Project description
-└── requirements.txt          # Required Python libraries
+📁 Project Directory
+├── car_data.csv              # Dataset containing car features and selling prices
+├── car_price_prediction.ipynb # Jupyter Notebook with the project code
+├── requirements.txt          # List of required Python libraries
+└── README.md                 # Project documentation
 ```
 
-## Features
+---
 
-The following features are used to predict the car price:
+## **Features**
 
-- **Year**: The manufacturing year of the car.
-- **Present_Price**: The current market price of the car.
-- **Kms_Driven**: The total kilometers driven by the car.
-- **Fuel_Type**: Type of fuel (Petrol, Diesel, CNG).
-- **Seller_Type**: Type of seller (Dealer, Individual).
-- **Transmission**: Type of transmission (Manual, Automatic).
+The dataset includes the following attributes:
+
+- **Year**: Manufacturing year of the car.
+- **Present_Price**: Current market price of the car (in lakhs).
+- **Kms_Driven**: Total kilometers driven by the car.
+- **Fuel_Type**: Fuel type of the car (Petrol, Diesel, CNG).
+- **Seller_Type**: Whether the seller is a dealer or an individual.
+- **Transmission**: Transmission type (Manual or Automatic).
 - **Owner**: Number of previous owners.
 
-## Requirements
+---
 
-To run the project, you will need the following Python libraries:
+## **Requirements**
 
-- pandas
-- numpy
-- matplotlib
-- scikit-learn
+To run this project, the following Python libraries are required:
 
-Install the required dependencies using:
+- **pandas**
+- **numpy**
+- **matplotlib**
+- **scikit-learn**
+
+Install these dependencies using the command:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## How to Use
+---
 
-1. Clone this repository to your local machine:
+## **How to Run**
 
-    ```bash
-    git clone https://github.com/your-username/car-price-prediction.git
-    ```
-
-2. Make sure you have the dataset (`dataset.csv`) ready.
-   
-3. Run the Python script `car_price_prediction.py` to train and test the model:
+1. Clone this repository:
 
     ```bash
-    python car_price_prediction.py
+    git clone https://github.com/Surajpatel28/Car_Price_Prediction_Model.git
     ```
 
-4. The model will output the predicted prices for new cars based on the provided features.
+2. Ensure the dataset file `car_data.csv` is in the project directory.
 
-## Results
+3. Open the Jupyter Notebook:
 
-The model will display an R-squared error value, which represents the accuracy of the predictions. Additionally, scatter plots comparing predicted prices with actual prices (or features like year) will be displayed.
+    ```bash
+    jupyter notebook car_price_prediction.ipynb
+    ```
 
-## Future Work
+4. Execute the cells in the notebook to:
+    - Load the dataset.
+    - Train a Linear Regression model.
+    - Predict prices for unseen data.
+    - Evaluate the model's performance using R-squared error.
+    - Visualize the results with scatter plots.
 
-- Explore other machine learning algorithms like Random Forest or Gradient Boosting for better accuracy.
-- Implement feature scaling to improve model performance.
-- Add a user interface to input car details and get predictions.
+---
 
-### Notes:
-- Replace `your-username` in the `git clone` command with your GitHub username.
-- Include any additional files or directories that are part of your project.
-- Add the actual dataset to your repository or mention how to access it if it's hosted elsewhere.
+## **Results**
 
-Feel free to modify this README as needed!
+- The model evaluates performance using the **R-squared error metric**.
+- Scatter plots are generated to visualize the relationship between actual and predicted prices, providing insights into model accuracy.
+
+---
+
+## **Future Enhancements**
+
+- Explore advanced models like Random Forest and Gradient Boosting for better accuracy.
+- Incorporate feature scaling to optimize the model's performance.
+- Develop a web or GUI-based interface to input car details and retrieve price predictions interactively.
+
+---
