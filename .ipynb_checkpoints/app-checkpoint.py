@@ -37,7 +37,7 @@ def predict():
     prediction = model.predict(user_input)[0]
 
     return jsonify({
-        "Car Price: ": f"₹{prediction}"
+        "Car Price: ": f"₹{prediction:.2f} Lakh"
     })
 
 if __name__ == "__main__":
