@@ -27,7 +27,7 @@ const App = () => {
     setPrediction(null);
 
     try {
-      const response = await axios.post("http://127.0.0.1:5000/predict", {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/predict`, {
         year: [parseInt(formData.year)],
         Present_Price: [parseFloat(formData.Present_Price)],
         Kms_Driven: [parseInt(formData.Kms_Driven)],
